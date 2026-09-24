@@ -1,0 +1,30 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: demo-c
+  namespace: voter
+spec:
+  branch: main
+  clusterProviderRef:
+    name: default
+  commit:
+    message:
+      liveTemplate: |-
+        chore(demo-c): {{.Count}} database request{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{.Kind}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(demo-c): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window: 5s
+  gitProviderRef:
+    name: k8s-trail
+  onRefusal: Ignore
+  path: clusters/k8s.koudijs.dev/demo-c
+  placement:
+    byType:
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false

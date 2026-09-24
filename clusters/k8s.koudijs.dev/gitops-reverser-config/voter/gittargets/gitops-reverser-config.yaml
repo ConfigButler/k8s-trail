@@ -1,0 +1,39 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: gitops-reverser-config
+  namespace: voter
+spec:
+  branch: main
+  clusterProviderRef:
+    name: default
+  commit:
+    message:
+      liveTemplate: |-
+        chore(config): {{.Count}} ConfigButler change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{.Kind}} {{.Namespace}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(config): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window: 5s
+  encryption:
+    age:
+      enabled: true
+      recipients:
+        extractFromSecret: true
+        generateWhenMissing: true
+    provider: sops
+    secretRef:
+      name: gitops-reverser-age
+  gitProviderRef:
+    name: k8s-trail
+  onRefusal: Ignore
+  path: clusters/k8s.koudijs.dev/gitops-reverser-config
+  placement:
+    byType:
+      v1/secrets: '{namespace}/secrets/{name}{sensitiveSuffix}'
+    default: '{namespace}/{resource}/{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: true

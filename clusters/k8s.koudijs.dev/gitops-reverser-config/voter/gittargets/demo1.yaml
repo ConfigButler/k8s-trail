@@ -1,0 +1,34 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: demo1
+  namespace: voter
+spec:
+  branch: main
+  clusterProviderRef:
+    name: default
+  commit:
+    message:
+      liveTemplate: |-
+        chore(demo1): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{.Resource}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(demo1): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window: 5s
+  gitProviderRef:
+    name: k8s-trail
+  onRefusal: Ignore
+  path: clusters/k8s.koudijs.dev/demo1
+  placement:
+    byType:
+      examples.configbutler.ai/v1alpha1/quizsessions: quiz-configs.yaml
+      examples.configbutler.ai/v1alpha1/quizsubmissions: submissions.yaml
+      rbac.authorization.k8s.io/v1/rolebindings: authorization.yaml
+      rbac.authorization.k8s.io/v1/roles: authorization.yaml
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false
