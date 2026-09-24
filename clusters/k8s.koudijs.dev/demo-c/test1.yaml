@@ -1,0 +1,24 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  annotations:
+    platform.configbutler.ai/intent: sdfsdf
+  name: test1
+spec:
+  dataClassification: confidential
+  deletionPolicy: snapshot-then-delete
+  engine: mysql
+  engineVersion: "22"
+  network:
+    exposure: cluster-only
+  owner:
+    contact: test@test.com
+    costCentre: CC-finance-07
+    onCallRotation: "222"
+    team: dsfgsdfg
+  purpose: sfdfgdfsg
+  region: eu-west-1
+  service: sdfsdf
+  size: xlarge
+  storageGB: 123
+  tier: business-critical
