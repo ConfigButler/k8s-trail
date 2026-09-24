@@ -1,0 +1,161 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: room-pass
+rules:
+  - apiGroups:
+      - roompass.configbutler.ai
+    resources:
+      - rooms
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - roompass.configbutler.ai
+    resources:
+      - rooms/status
+    verbs:
+      - get
+      - update
+      - patch
+  - apiGroups:
+      - roompass.configbutler.ai
+    resources:
+      - participants
+    verbs:
+      - get
+      - list
+      - create
+  - apiGroups:
+      - ""
+    resourceNames:
+      - room-pass-cookie
+    resources:
+      - secrets
+    verbs:
+      - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: voter
+rules:
+  - apiGroups:
+      - examples.configbutler.ai
+    resourceNames:
+      - demo-coffee
+    resources:
+      - coffeeconfigs
+    verbs:
+      - list
+      - watch
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - quizsessions
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - quizsubmissions
+    verbs:
+      - list
+      - watch
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - quizsessions/status
+    verbs:
+      - get
+      - patch
+  - apiGroups:
+      - platform.configbutler.ai
+    resources:
+      - databases
+    verbs:
+      - list
+      - watch
+  - apiGroups:
+      - configbutler.ai
+    resources:
+      - commitrequests
+    verbs:
+      - list
+      - watch
+  - apiGroups:
+      - roompass.configbutler.ai
+    resourceNames:
+      - demo
+    resources:
+      - rooms
+    verbs:
+      - list
+      - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: voter-audience
+rules:
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - coffeeconfigs
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - configbutler.ai
+    resources:
+      - commitrequests
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - quizsessions
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - quizsubmissions
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+  - apiGroups:
+      - platform.configbutler.ai
+    resources:
+      - databases
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - patch
+      - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: voter-audience-coffee-admin
+rules:
+  - apiGroups:
+      - examples.configbutler.ai
+    resources:
+      - coffeeconfigs
+    verbs:
+      - patch
+      - update
