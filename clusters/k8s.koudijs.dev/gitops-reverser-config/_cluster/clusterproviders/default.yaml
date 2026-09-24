@@ -1,0 +1,21 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: ClusterProvider
+metadata:
+  annotations:
+    meta.helm.sh/release-name: gitops-reverser
+    meta.helm.sh/release-namespace: gitops-reverser
+  labels:
+    app.kubernetes.io/instance: gitops-reverser
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: gitops-reverser
+    app.kubernetes.io/version: 0.49.1
+    helm.sh/chart: gitops-reverser-0.49.1_290caa1fff5e
+    helm.toolkit.fluxcd.io/name: gitops-reverser
+    helm.toolkit.fluxcd.io/namespace: flux-system
+  name: default
+spec:
+  accessFrom:
+    names:
+      - gitops-reverser
+      - voter
+  allowAnySourceNamespace: false
