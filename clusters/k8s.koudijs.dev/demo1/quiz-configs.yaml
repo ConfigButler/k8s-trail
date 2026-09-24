@@ -1,0 +1,81 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSession
+metadata:
+  name: demo1
+spec:
+  questions:
+    - choices:
+        - Argo CD
+        - Flux
+        - Both
+        - Neither yet
+      id: stack
+      required: true
+      title: Argo CD or Flux?
+      type: singleChoice
+    - choices:
+        - Helm
+        - Kustomize
+        - Both
+        - Plain YAML
+      id: packaging
+      required: true
+      title: Helm or Kustomize?
+      type: singleChoice
+    - choices:
+        - A pull request to a GitOps repo
+        - kubectl apply
+        - A web UI or portal
+        - I ask someone in Slack or a ticket
+        - Someone else does it entirely
+      id: approach
+      required: true
+      title: How do you change configuration today? Pick all that apply.
+      type: multiChoice
+    - id: wish
+      placeholder: Optional — your answer will be visible to the room
+      title: 'In one line: what do you wish people could self-service?'
+      type: freeText
+  state: closed
+  title: How do you change Kubernetes configuration today?
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSession
+metadata:
+  name: evaluation
+spec:
+  questions:
+    - choices:
+        - Yes, with signed commits and a repo nothing reconciles from
+        - Only as an audit trail nothing reads back
+        - Only in a lab
+        - "No"
+      id: trust
+      required: true
+      title: Would you let a cluster write to your Git repository?
+      type: singleChoice
+    - choices:
+        - A new customer or tenant
+        - Databases and infrastructure
+        - Application configuration
+        - Access and permissions
+        - Feature flags and rollouts
+        - Nothing yet — still thinking
+      id: first
+      title: What would you point it at first?
+      type: multiChoice
+    - id: adopt
+      max: 10
+      min: 0
+      title: How likely are you to try this in the next six months?
+      type: scale0to10
+    - id: missing
+      placeholder: Optional — your answer will be visible to the room
+      title: What would you need before running this for real?
+      type: freeText
+    - id: contact
+      placeholder: Optional — only used to get back to you
+      title: Want me to follow up? Leave an email address.
+      type: freeText
+  state: live
+  title: Now that you have seen it — would you run this?
