@@ -1,0 +1,23 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: Pascal
+  name: demo1-pascal
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Argo CD
+    - questionId: packaging
+      singleChoice: Kustomize
+    - multiChoice:
+        - A pull request to a GitOps repo
+      questionId: approach
+    - freeText: Everything
+      questionId: wish
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:46:36Z"

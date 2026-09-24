@@ -1,0 +1,23 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: andy
+  name: demo1-andy
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Neither yet
+    - questionId: packaging
+      singleChoice: Plain YAML
+    - multiChoice:
+        - A web UI or portal
+      questionId: approach
+    - freeText: test
+      questionId: wish
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:45:27Z"

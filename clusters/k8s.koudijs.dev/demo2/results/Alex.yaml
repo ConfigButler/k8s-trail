@@ -1,0 +1,24 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: Alex
+  name: demo1-alex
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Argo CD
+    - questionId: packaging
+      singleChoice: Both
+    - multiChoice:
+        - A pull request to a GitOps repo
+        - kubectl apply
+      questionId: approach
+    - freeText: 'Happiness '
+      questionId: wish
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:47:15Z"

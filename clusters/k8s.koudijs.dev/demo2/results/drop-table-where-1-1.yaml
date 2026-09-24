@@ -1,0 +1,23 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: drop-table-where-1-1
+  name: demo1-drop-table-where-1-1
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Argo CD
+    - questionId: packaging
+      singleChoice: Plain YAML
+    - multiChoice:
+        - Someone else does it entirely
+      questionId: approach
+    - freeText: 'Everything. '
+      questionId: wish
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:46:15Z"

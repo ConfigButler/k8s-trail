@@ -1,0 +1,21 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: scn
+  name: demo1-scn
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Neither yet
+    - questionId: packaging
+      singleChoice: Both
+    - multiChoice:
+        - kubectl apply
+      questionId: approach
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:47:29Z"

@@ -1,0 +1,25 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: demo1
+    voter.configbutler.ai/submitter: Carsnet
+  name: demo1-carsnet
+spec:
+  answers:
+    - questionId: stack
+      singleChoice: Argo CD
+    - questionId: packaging
+      singleChoice: Both
+    - multiChoice:
+        - A pull request to a GitOps repo
+        - kubectl apply
+        - A web UI or portal
+        - I ask someone in Slack or a ticket
+        - Someone else does it entirely
+      questionId: approach
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: demo1
+  submittedAt: "2026-09-17T09:45:51Z"
