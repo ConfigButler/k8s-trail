@@ -1,0 +1,19 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitProvider
+metadata:
+  name: k8s-trail
+  namespace: voter
+spec:
+  allowedBranches:
+    - main
+  commit:
+    committer:
+      email: bot@configbutler.ai
+      name: ConfigButler Bot
+    signing:
+      generateWhenMissing: false
+      secretRef:
+        name: k8s-audit-trail-signing
+  secretRef:
+    name: k8s-trail-git
+  url: ssh://git@github.com/ConfigButler/k8s-trail.git
