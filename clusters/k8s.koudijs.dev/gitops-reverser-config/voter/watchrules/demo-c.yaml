@@ -1,0 +1,19 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: demo-c
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: demo-c
+  rules:
+    - apiGroups:
+        - platform.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      operations:
+        - CREATE
+        - UPDATE
+        - DELETE
+      resources:
+        - databases

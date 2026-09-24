@@ -1,0 +1,31 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: gitops-reverser-config
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: gitops-reverser-config
+  rules:
+    - apiGroups:
+        - configbutler.ai
+      apiVersions:
+        - v1alpha3
+      operations:
+        - CREATE
+        - UPDATE
+        - DELETE
+      resources:
+        - gitproviders
+        - gittargets
+        - watchrules
+    - apiGroups:
+        - ""
+      apiVersions:
+        - v1
+      operations:
+        - CREATE
+        - UPDATE
+        - DELETE
+      resources:
+        - secrets

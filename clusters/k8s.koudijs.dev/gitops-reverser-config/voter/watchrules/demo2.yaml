@@ -1,0 +1,20 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: demo2
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: demo2
+  rules:
+    - apiGroups:
+        - examples.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      operations:
+        - CREATE
+        - UPDATE
+        - DELETE
+      resources:
+        - coffeeconfigs
+        - quizsubmissions
