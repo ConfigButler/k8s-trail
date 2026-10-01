@@ -4,7 +4,7 @@ metadata:
   name: room-pass
 rules:
   - apiGroups:
-      - roompass.configbutler.ai
+      - room-pass.koudijs.dev
     resources:
       - rooms
     verbs:
@@ -12,7 +12,7 @@ rules:
       - list
       - watch
   - apiGroups:
-      - roompass.configbutler.ai
+      - room-pass.koudijs.dev
     resources:
       - rooms/status
     verbs:
@@ -20,7 +20,7 @@ rules:
       - update
       - patch
   - apiGroups:
-      - roompass.configbutler.ai
+      - room-pass.koudijs.dev
     resources:
       - participants
     verbs:
@@ -87,7 +87,7 @@ rules:
       - list
       - watch
   - apiGroups:
-      - roompass.configbutler.ai
+      - room-pass.koudijs.dev
     resourceNames:
       - demo
     resources:
