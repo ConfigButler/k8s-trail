@@ -3,18 +3,23 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "There is no spoon \U0001F944 nor fork in git ?"
-  currency: ' '
-  mail:
-    apiKeySecretRef: {}
-  payments:
-    apiKeySecretRef: {}
-    zeroAmountCheckoutAllowed: true
+  bannerText: "Edit this menu. Every phone in the room sees your change."
+  currency: 'EUR'
   products:
-    - description: ""
+    - description: "Double shot with silky milk"
       enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-1
-  shopName: ☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕☕
-  vouchers: []
+      name: Flat White
+      priceCents: 395
+      sku: coffee-flat-white
+    - description: Small, strong, and fast
+      enabled: true
+      name: Espresso
+      priceCents: 275
+      sku: coffee-espresso
+    - description: Batch brew for fast queues
+      enabled: true
+      name: Filter Coffee
+      priceCents: 250
+      sku: coffee-filter
+  shopName: Koudijs Demo Coffee
+  vouchers: [{code: TESTNET, discountType: percentage, discountValue: 100, displayMessage: TestNet coffee is on us, enabled: true, maximumUsage: 3}]
