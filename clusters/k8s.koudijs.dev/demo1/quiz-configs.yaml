@@ -47,7 +47,7 @@ spec:
       required: true
       title: What should happen when two people save the same setting at once?
       type: singleChoice
-  state: live
+  state: closed
   title: Building the frontend
 ---
 apiVersion: examples.configbutler.ai/v1alpha1
@@ -73,5 +73,5 @@ spec:
       required: true
       title: 'Kubernetes as your BFF: weird, brilliant or dangerous?'
       type: singleChoice
-  state: live
+  state: closed
   title: Coffee, and the verdict
