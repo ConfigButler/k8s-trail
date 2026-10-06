@@ -189,8 +189,8 @@ kind: RoleBinding
 metadata:
   annotations:
     voter.configbutler.ai/description: Created live from the operator page. Not a Flux resource; gitops-reverser mirrors it to the audit trail.
-    voter.configbutler.ai/display-name: Simon
-    voter.configbutler.ai/participant: p-simon
+    voter.configbutler.ai/display-name: Simon3
+    voter.configbutler.ai/participant: p-simon3
   labels:
     app.kubernetes.io/managed-by: voter
     voter.configbutler.ai/grant: coffee-admin-person
@@ -202,7 +202,7 @@ roleRef:
 subjects:
   - apiGroup: rbac.authorization.k8s.io
     kind: User
-    name: demo:CgVzaW1vbhIJcm9vbS1wYXNz
+    name: demo:CgZzaW1vbjMSCXJvb20tcGFzcw
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
