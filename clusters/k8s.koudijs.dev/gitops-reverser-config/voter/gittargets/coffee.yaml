@@ -1,29 +1,29 @@
 apiVersion: configbutler.ai/v1alpha3
 kind: GitTarget
 metadata:
-  name: demo2
+  name: coffee
   namespace: voter
 spec:
-  branch: main
+  branch: coffee-change
   clusterProviderRef:
     name: default
   commit:
     message:
       liveTemplate: |-
-        chore(demo2): {{.Count}} change{{if ne .Count 1}}s{{end}}{{with .LabelValue "voter.configbutler.ai/round"}} in {{.}}{{end}}
+        chore(coffee): {{.Count}} change{{if ne .Count 1}}s{{end}}
 
         {{range .Resources -}}
         - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
         {{end -}}
-      reconcileTemplate: 'chore(demo2): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+      reconcileTemplate: 'chore(coffee): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
     window: 5s
   gitProviderRef:
     name: k8s-trail
   onRefusal: Ignore
-  path: clusters/k8s.koudijs.dev/demo2
+  path: configs
   placement:
     byType:
-      examples.configbutler.ai/v1alpha1/quizsubmissions: results/{label:voter.configbutler.ai/submitter|_anonymous}.yaml
+      examples.configbutler.ai/v1alpha1/coffeeconfigs: coffeeconfig.yaml
       v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
     default: '{name}.yaml'
   prune:
