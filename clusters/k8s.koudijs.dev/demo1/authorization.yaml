@@ -48,8 +48,7 @@ rules:
     resources:
       - coffeeconfigs
     verbs:
-      - list
-      - watch
+      - get
   - apiGroups:
       - examples.configbutler.ai
     resources:
@@ -72,29 +71,6 @@ rules:
     verbs:
       - get
       - patch
-  - apiGroups:
-      - platform.configbutler.ai
-    resources:
-      - databases
-    verbs:
-      - list
-      - watch
-  - apiGroups:
-      - configbutler.ai
-    resources:
-      - commitrequests
-    verbs:
-      - list
-      - watch
-  - apiGroups:
-      - room-pass.koudijs.dev
-    resourceNames:
-      - demo
-    resources:
-      - rooms
-    verbs:
-      - list
-      - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
