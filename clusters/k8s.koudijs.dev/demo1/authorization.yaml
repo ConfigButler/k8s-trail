@@ -108,8 +108,6 @@ rules:
       - quizsubmissions
     verbs:
       - get
-      - list
-      - watch
       - create
   - apiGroups:
       - platform.configbutler.ai
