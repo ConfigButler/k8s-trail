@@ -21,5 +21,7 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
-  shopName: 'Koudijs Demo 12'
-  vouchers: [{code: TESTNET, discountType: percentage, discountValue: 100, displayMessage: TestNet coffee is on us, enabled: true, maximumUsage: 3}]
+  shopName: 'Frontmania hounted Coffee'
+  vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 10, displayMessage: Wow you actually tried this, enabled: true, maximumUsage: 20, appliesToProducts: []}]
+  payments:
+    zeroAmountCheckoutAllowed: true
