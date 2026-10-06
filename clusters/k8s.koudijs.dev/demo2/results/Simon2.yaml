@@ -1,0 +1,21 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: evaluation
+    voter.configbutler.ai/submitter: Simon2
+  name: evaluation-simon2
+spec:
+  answers:
+    - questionId: trust
+      singleChoice: Yes, with signed commits and a repo nothing reconciles from
+    - multiChoice:
+        - A new customer or tenant
+      questionId: first
+  questionsDigest: sha256:b257f8f2114b2d96de9e89bcf1dec03c4a8547f325836bb59b6926d4e5258c5f
+  roundUID: ae56e69f-3b60-437b-a449-38456e19900a
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: evaluation
+  submittedAt: "2026-10-06T12:21:47Z"
