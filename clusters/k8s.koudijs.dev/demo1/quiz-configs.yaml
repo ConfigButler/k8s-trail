@@ -2,6 +2,8 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSession
 metadata:
   name: round-3
+  annotations:
+    voter.configbutler.ai/ballot-groups: none
 spec:
   questions:
     - choices:
@@ -28,6 +30,8 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSession
 metadata:
   name: round-1
+  annotations:
+    voter.configbutler.ai/ballot-groups: none
 spec:
   questions:
     - choices:
@@ -61,6 +65,8 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSession
 metadata:
   name: round-2
+  annotations:
+    voter.configbutler.ai/ballot-groups: none
 spec:
   questions:
     - choices:
