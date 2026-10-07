@@ -3,7 +3,7 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "Edit this menu. Every phone in the room sees your change."
+  bannerText: "Free coffee for all?"
   currency: 'IDR'
   products:
     - description: ""
