@@ -3,7 +3,7 @@ kind: QuizSession
 metadata:
   name: round-3
   annotations:
-    voter.configbutler.ai/ballot-groups: none
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue
 spec:
   questions:
     - choices:
@@ -31,7 +31,7 @@ kind: QuizSession
 metadata:
   name: round-1
   annotations:
-    voter.configbutler.ai/ballot-groups: none
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue
 spec:
   questions:
     - choices:
@@ -66,7 +66,7 @@ kind: QuizSession
 metadata:
   name: round-2
   annotations:
-    voter.configbutler.ai/ballot-groups: none
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue
 spec:
   questions:
     - choices:
