@@ -23,7 +23,7 @@ spec:
       required: true
       title: 'Kubernetes as your BFF: weird, brilliant or dangerous?'
       type: singleChoice
-  state: closed
+  state: live
   title: Coffee, and the verdict
 ---
 apiVersion: examples.configbutler.ai/v1alpha1
@@ -105,5 +105,5 @@ spec:
       required: true
       title: What should happen when two people save the same setting at once?
       type: singleChoice
-  state: closed
+  state: live
   title: Building the frontend
