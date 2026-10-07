@@ -1,0 +1,22 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: round-1
+    voter.configbutler.ai/submitter: Simon6
+  name: round-1-simon6
+spec:
+  answers:
+    - questionId: kubectl
+      singleChoice: Yes, every day
+    - questionId: kubecon
+      singleChoice: What is KubeCon?
+    - questionId: cncf
+      singleChoice: "Yes"
+  questionsDigest: sha256:6988d749bb1e0be807b25c6abbc1cb10f4fc1c5bc665d23fdbda3cc08dd23f13
+  roundUID: 898ce86c-ee0e-434f-b7d6-823712c71bcf
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: round-1
+  submittedAt: "2026-10-07T06:52:16Z"
