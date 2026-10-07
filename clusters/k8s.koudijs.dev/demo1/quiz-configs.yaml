@@ -3,7 +3,7 @@ kind: QuizSession
 metadata:
   name: round-1
   annotations:
-    voter.configbutler.ai/ballot-groups: demo:frontend-vue
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue,demo:voter-audience
 spec:
   questions:
     - choices:
@@ -32,7 +32,7 @@ spec:
       required: true
       title: Do you know CNCF?
       type: singleChoice
-  state: closed
+  state: live
   title: Warm-up
 ---
 apiVersion: examples.configbutler.ai/v1alpha1
@@ -40,7 +40,7 @@ kind: QuizSession
 metadata:
   name: round-2
   annotations:
-    voter.configbutler.ai/ballot-groups: demo:frontend-vue
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue,demo:voter-audience
 spec:
   questions:
     - choices:
