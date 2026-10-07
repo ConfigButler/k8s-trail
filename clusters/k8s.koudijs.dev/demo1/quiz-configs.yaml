@@ -1,34 +1,6 @@
 apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSession
 metadata:
-  name: round-3
-  annotations:
-    voter.configbutler.ai/ballot-groups: demo:voter-audience
-spec:
-  questions:
-    - choices:
-        - Live, I trust everyone
-        - Reviewed first
-        - Only the owner may change it
-      id: cappuccino
-      required: true
-      title: 'Changing the price of a cappuccino: live, or reviewed first?'
-      type: singleChoice
-    - choices:
-        - Weird
-        - Brilliant
-        - Dangerous
-        - All of the above
-      id: bff
-      required: true
-      title: 'Kubernetes as your BFF: weird, brilliant or dangerous?'
-      type: singleChoice
-  state: live
-  title: Coffee, and the verdict
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: QuizSession
-metadata:
   name: round-1
   annotations:
     voter.configbutler.ai/ballot-groups: demo:voter-audience
@@ -53,7 +25,9 @@ spec:
       title: How many people visit KubeCon?
       type: singleChoice
     - choices:
-        - "Yes"
+        - "Yes, cool!"
+        - Yes, but too big
+        - "No"
       id: cncf
       required: true
       title: Do you know CNCF?
@@ -86,7 +60,7 @@ spec:
         - "No"
       id: role
       required: true
-      title: Do you consider yourself a…
+      title: What fits you best?
       type: singleChoice
     - choices:
         - Never
@@ -105,5 +79,5 @@ spec:
       required: true
       title: What should happen when two people save the same setting at once?
       type: singleChoice
-  state: live
+  state: closed
   title: Building the frontend
