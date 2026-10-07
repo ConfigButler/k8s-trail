@@ -56,5 +56,5 @@ spec:
       name: New Coffee
       priceCents: 1000
       sku: Bubble tea
-  shopName: 'Haagse Coffee Shop'
+  shopName: 'Koud'
   vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 1}]
