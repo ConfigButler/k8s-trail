@@ -1,0 +1,22 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: round-1
+    voter.configbutler.ai/submitter: Laura
+  name: round-1-laura
+spec:
+  answers:
+    - questionId: kubectl
+      singleChoice: What's kubectl?
+    - questionId: kubecon
+      singleChoice: What is KubeCon?
+    - questionId: cncf
+      singleChoice: "No"
+  questionsDigest: sha256:bec00822a858a24eacbdc0c40d9ff9e3c64309e7c5a83942f1a95085ca35aa19
+  roundUID: 898ce86c-ee0e-434f-b7d6-823712c71bcf
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: round-1
+  submittedAt: "2026-10-07T09:07:41Z"
