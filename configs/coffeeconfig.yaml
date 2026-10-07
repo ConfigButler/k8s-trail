@@ -56,5 +56,5 @@ spec:
       name: "null"
       priceCents: 1000
       sku: Bubble tea
-  shopName: 'Koud'
+  shopName: 'Koud67'
   vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: false, maximumUsage: 1}]
