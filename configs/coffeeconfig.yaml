@@ -9,7 +9,7 @@ spec:
     - description: "Double shot with silky milk"
       enabled: true
       name: Flat White
-      priceCents: 395
+      priceCents: 380
       sku: coffee-flat-white
     - description: Small, strong, and fast
       enabled: true
@@ -21,7 +21,7 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
-  shopName: 'Frontmania hounted Coffee'
+  shopName: 'Frontmania hounted coffee'
   vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 10, displayMessage: Wow you actually tried this, enabled: true, maximumUsage: 20, appliesToProducts: []}]
   payments:
     zeroAmountCheckoutAllowed: true
