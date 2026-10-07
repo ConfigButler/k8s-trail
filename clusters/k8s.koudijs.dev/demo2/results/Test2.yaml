@@ -2,30 +2,6 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSubmission
 metadata:
   labels:
-    voter.configbutler.ai/round: demo1
-    voter.configbutler.ai/submitter: Test2
-  name: demo1-test2
-spec:
-  answers:
-    - questionId: stack
-      singleChoice: Argo CD
-    - questionId: packaging
-      singleChoice: Both
-    - multiChoice:
-        - A web UI or portal
-        - kubectl apply
-        - A pull request to a GitOps repo
-      questionId: approach
-  sessionRef:
-    group: examples.configbutler.ai
-    kind: QuizSession
-    name: demo1
-  submittedAt: "2026-09-17T09:46:21Z"
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: QuizSubmission
-metadata:
-  labels:
     voter.configbutler.ai/round: evaluation
     voter.configbutler.ai/submitter: Test2
   name: evaluation-test2
