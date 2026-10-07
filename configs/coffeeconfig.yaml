@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "Edit this menu. Every phone in the room sees your change."
-  currency: 'EUR'
+  currency: 'IDR'
   products:
     - description: ""
       enabled: true
