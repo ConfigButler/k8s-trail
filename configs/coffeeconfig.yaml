@@ -35,36 +35,6 @@ spec:
       enabled: true
       name: New Coffee
       priceCents: 300
-      sku: coffee-9
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
       sku: coffee-10
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-11
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-12
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-13
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-14
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-15
   shopName: 'Haagse Coffee Shop'
   vouchers: []
