@@ -3,7 +3,7 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "Free coffee for all?"
+  bannerText: "Free coffee for all?sdfsdf"
   currency: 'IDR'
   products:
     - description: ""
