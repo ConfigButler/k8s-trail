@@ -3,23 +3,6 @@ kind: QuizSubmission
 metadata:
   labels:
     voter.configbutler.ai/round: evaluation
-    voter.configbutler.ai/submitter: DefinitlyNo666
-  name: evaluation-definitlyno666
-spec:
-  answers:
-    - questionId: trust
-      singleChoice: Yes, with signed commits and a repo nothing reconciles from
-  sessionRef:
-    group: examples.configbutler.ai
-    kind: QuizSession
-    name: evaluation
-  submittedAt: "2026-09-17T10:13:35Z"
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: QuizSubmission
-metadata:
-  labels:
-    voter.configbutler.ai/round: evaluation
     voter.configbutler.ai/submitter: Test2
   name: evaluation-test2
 spec:
