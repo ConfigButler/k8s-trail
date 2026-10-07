@@ -7,13 +7,13 @@ spec:
   currency: 'IDR'
   products:
     - description: ""
-      enabled: false
+      enabled: true
       name: Quadruple expresso
       priceCents: 300
       sku: coffee-4
     - description: ""
-      enabled: false
-      name: New Coffee
+      enabled: true
+      name: Bakkie pleur
       priceCents: 200
       sku: coffee-5
     - description: ""
