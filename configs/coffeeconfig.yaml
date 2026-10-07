@@ -3,23 +3,58 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "Edit this menu. Every phone in the room sees your change."
-  currency: 'EUR'
+  bannerText: "Free coffee for all?sdfsdf"
+  currency: 'IDR'
   products:
-    - description: "Double shot with silky milk"
+    - description: ""
       enabled: true
-      name: Flat White
-      priceCents: 395
-      sku: coffee-flat-white
-    - description: Small, strong, and fast
+      name: Quadruple expresso
+      priceCents: 300
+      sku: coffee-4
+    - description: ""
       enabled: true
-      name: Espresso
-      priceCents: 275
-      sku: coffee-espresso
-    - description: Batch brew for fast queues
+      name: Bakkie pleur
+      priceCents: 200
+      sku: coffee-5
+    - description: ""
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-6
+    - description: "0"
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-7
+    - description: ""
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-8
+    - description: ""
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-10
+    - description: ""
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-16
+    - description: ""
+      enabled: false
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-17
+    - description: "]"
+      enabled: false
+      name: Bakkie pleur
+      priceCents: 0
+      sku: coffee-13
+    - description: "Null"
       enabled: true
-      name: Filter Coffee
-      priceCents: 250
-      sku: coffee-filter
-  shopName: 'Haunted Demo Coffee'
-  vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 20, displayMessage: Only filter coffee, enabled: true, maximumUsage: 10, appliesToProducts: [coffee-filter]}]
+      name: "null"
+      priceCents: 1000
+      sku: Bubble tea
+  shopName: 'Jas Verstoppen'
+  vouchers: []
