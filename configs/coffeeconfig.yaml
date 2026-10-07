@@ -6,21 +6,6 @@ spec:
   bannerText: "Edit this menu. Every phone in the room sees your change."
   currency: 'EUR'
   products:
-    - description: "Double shot with silky milk"
-      enabled: true
-      name: Flat White
-      priceCents: 39
-      sku: coffee-flat-white
-    - description: Small, strong, and fast
-      enabled: true
-      name: Espresso
-      priceCents: 275
-      sku: coffee-espresso
-    - description: Batch brew for fast queues
-      enabled: true
-      name: Filter Coffee
-      priceCents: 250
-      sku: coffee-filter
     - description: ""
       enabled: true
       name: New Coffee
@@ -82,4 +67,4 @@ spec:
       priceCents: 300
       sku: coffee-15
   shopName: 'Haunted Demo Coffee 2'
-  vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 20, displayMessage: Only filter coffee, enabled: true, maximumUsage: 10, appliesToProducts: [coffee-filter]}]
+  vouchers: []
