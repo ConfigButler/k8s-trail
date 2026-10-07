@@ -14,7 +14,7 @@ spec:
     - description: Small, strong, and fast
       enabled: true
       name: Espresso
-      priceCents: 275
+      priceCents: 1200
       sku: coffee-espresso
     - description: Batch brew for fast queues
       enabled: true
