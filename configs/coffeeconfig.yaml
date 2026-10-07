@@ -48,8 +48,8 @@ spec:
       sku: coffee-17
     - description: ""
       enabled: true
-      name: New Coffee
-      priceCents: 1000
+      name: Bakkie pleur
+      priceCents: 0
       sku: coffee-13
     - description: ""
       enabled: true
