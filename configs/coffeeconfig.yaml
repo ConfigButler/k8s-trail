@@ -7,54 +7,54 @@ spec:
   currency: 'IDR'
   products:
     - description: ""
-      enabled: true
+      enabled: false
       name: Quadruple expresso
       priceCents: 300
       sku: coffee-4
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 200
       sku: coffee-5
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-6
-    - description: ""
-      enabled: true
+    - description: "0"
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-7
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-8
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-10
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-16
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 300
       sku: coffee-17
-    - description: ""
-      enabled: true
+    - description: "]"
+      enabled: false
       name: Bakkie pleur
       priceCents: 0
       sku: coffee-13
     - description: ""
-      enabled: true
+      enabled: false
       name: New Coffee
       priceCents: 1000
       sku: Bubble tea
   shopName: 'Koud'
-  vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 1}]
+  vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: false, maximumUsage: 1}]
