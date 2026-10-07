@@ -51,8 +51,8 @@ spec:
       name: Bakkie pleur
       priceCents: 0
       sku: coffee-13
-    - description: ""
-      enabled: false
+    - description: "Null"
+      enabled: true
       name: "null"
       priceCents: 1000
       sku: Bubble tea
