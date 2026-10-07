@@ -14,14 +14,12 @@ spec:
     - description: Small, strong, and fast
       enabled: true
       name: Espresso
-      priceCents: 1200
+      priceCents: 275
       sku: coffee-espresso
     - description: Batch brew for fast queues
       enabled: true
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
-  shopName: 'Frontmania hounted Coffee'
-  vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 10, displayMessage: Wow you actually tried this, enabled: true, maximumUsage: 20, appliesToProducts: []}]
-  payments:
-    zeroAmountCheckoutAllowed: true
+  shopName: 'Koudijs Demo Coffee'
+  vouchers: [{code: TESTNET, discountType: percentage, discountValue: 100, displayMessage: TestNet coffee is on us, enabled: true, maximumUsage: 3}]
