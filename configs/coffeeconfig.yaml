@@ -9,7 +9,7 @@ spec:
     - description: "Double shot with silky milk"
       enabled: true
       name: Flat White
-      priceCents: 395
+      priceCents: 39
       sku: coffee-flat-white
     - description: Small, strong, and fast
       enabled: true
