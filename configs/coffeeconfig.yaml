@@ -44,12 +44,17 @@ spec:
     - description: ""
       enabled: true
       name: New Coffee
-      priceCents: 0
+      priceCents: 300
       sku: coffee-17
     - description: ""
       enabled: true
       name: New Coffee
       priceCents: 1000
       sku: coffee-13
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 1000
+      sku: Bubble tea
   shopName: 'Haagse Coffee Shop'
   vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 1}]
