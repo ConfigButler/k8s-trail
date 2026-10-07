@@ -738,3 +738,28 @@ spec:
     kind: QuizSession
     name: round-2
   submittedAt: "2026-10-07T09:27:30Z"
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: round-2
+    voter.configbutler.ai/submitter: Maartje
+  name: round-2-maartje
+spec:
+  answers:
+    - questionId: framework
+      singleChoice: Whatever comes out next week
+    - questionId: role
+      singleChoice: Full-stack
+    - questionId: diy
+      singleChoice: 1–3 times
+    - questionId: conflict
+      singleChoice: Merge it somehow
+  questionsDigest: sha256:3c680edd8ec0bd11de56bb090c29281d3a3f8ea2c39b607d54bc3ac399dea628
+  roundUID: e2638080-2875-4b35-af58-6c661d19b6fc
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: round-2
+  submittedAt: "2026-10-07T09:27:30Z"
