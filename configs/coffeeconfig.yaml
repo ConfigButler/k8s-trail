@@ -8,7 +8,7 @@ spec:
   products:
     - description: ""
       enabled: true
-      name: Quadruple espresso
+      name: Quadruple expresso
       priceCents: 300
       sku: coffee-4
     - description: ""
