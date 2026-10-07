@@ -204,3 +204,26 @@ spec:
     kind: QuizSession
     name: round-1
   submittedAt: "2026-10-07T09:07:40Z"
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSubmission
+metadata:
+  labels:
+    voter.configbutler.ai/round: round-1
+    voter.configbutler.ai/submitter: Kijk
+  name: round-1-kijk
+spec:
+  answers:
+    - questionId: kubectl
+      singleChoice: Yes, every day
+    - questionId: kubecon
+      singleChoice: "15.000"
+    - questionId: cncf
+      singleChoice: Yes, cool!
+  questionsDigest: sha256:bec00822a858a24eacbdc0c40d9ff9e3c64309e7c5a83942f1a95085ca35aa19
+  roundUID: 898ce86c-ee0e-434f-b7d6-823712c71bcf
+  sessionRef:
+    group: examples.configbutler.ai
+    kind: QuizSession
+    name: round-1
+  submittedAt: "2026-10-07T09:07:41Z"
