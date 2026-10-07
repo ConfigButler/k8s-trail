@@ -9,12 +9,12 @@ spec:
     - description: "Double shot with silky milk"
       enabled: true
       name: Flat White
-      priceCents: 396
+      priceCents: 395
       sku: coffee-flat-white
     - description: Small, strong, and fast
       enabled: true
       name: Espresso
-      priceCents: 275
+      priceCents: 1200
       sku: coffee-espresso
     - description: Batch brew for fast queues
       enabled: true
