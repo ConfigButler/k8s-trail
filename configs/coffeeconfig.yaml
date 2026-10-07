@@ -53,7 +53,7 @@ spec:
       sku: coffee-13
     - description: ""
       enabled: false
-      name: New Coffee
+      name: "null"
       priceCents: 1000
       sku: Bubble tea
   shopName: 'Koud'
