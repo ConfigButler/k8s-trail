@@ -3,31 +3,6 @@ kind: QuizSubmission
 metadata:
   labels:
     voter.configbutler.ai/round: demo1
-    voter.configbutler.ai/submitter: LTXKRS
-  name: demo1-ltxkrs
-spec:
-  answers:
-    - questionId: stack
-      singleChoice: Both
-    - questionId: packaging
-      singleChoice: Helm
-    - multiChoice:
-        - kubectl apply
-        - A web UI or portal
-      questionId: approach
-    - freeText: Everything
-      questionId: wish
-  sessionRef:
-    group: examples.configbutler.ai
-    kind: QuizSession
-    name: demo1
-  submittedAt: "2026-09-17T09:47:20Z"
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: QuizSubmission
-metadata:
-  labels:
-    voter.configbutler.ai/round: demo1
     voter.configbutler.ai/submitter: Luca
   name: demo1-luca
 spec:
