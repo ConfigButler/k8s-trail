@@ -1,0 +1,21 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  name: test-test
+spec:
+  dataClassification: internal
+  deletionPolicy: snapshot-then-delete
+  engine: postgresql
+  engineVersion: "20"
+  network:
+    exposure: cluster-only
+  owner:
+    contact: Pays@test.org
+    costCentre: CC-finance-12
+    onCallRotation: "No"
+    team: tungtung
+  region: us-east-1
+  service: test-test
+  size: xlarge
+  storageGB: 6769
+  tier: standard
