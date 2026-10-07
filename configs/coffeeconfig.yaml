@@ -36,5 +36,15 @@ spec:
       name: New Coffee
       priceCents: 300
       sku: coffee-10
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-16
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 0
+      sku: coffee-17
   shopName: 'Haagse Coffee Shop'
-  vouchers: []
+  vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 1}]
