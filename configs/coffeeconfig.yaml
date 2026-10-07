@@ -21,5 +21,65 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-4
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-5
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-6
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-7
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-8
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-9
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-10
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-11
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-12
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-13
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-14
+    - description: ""
+      enabled: true
+      name: New Coffee
+      priceCents: 300
+      sku: coffee-15
   shopName: 'Haunted Demo Coffee 2'
   vouchers: [{code: FRONTMANIA, discountType: percentage, discountValue: 20, displayMessage: Only filter coffee, enabled: true, maximumUsage: 10, appliesToProducts: [coffee-filter]}]
