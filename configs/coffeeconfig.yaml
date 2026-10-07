@@ -14,7 +14,7 @@ spec:
     - description: ""
       enabled: true
       name: New Coffee
-      priceCents: 300
+      priceCents: 200
       sku: coffee-5
     - description: ""
       enabled: true
