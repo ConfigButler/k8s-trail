@@ -1,0 +1,26 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  annotations:
+    platform.configbutler.ai/intent: I really would just like to have my db fast. For some app.
+  name: kksdksdf
+spec:
+  backup:
+    pointInTimeRecovery: true
+    schedule: '0 2 * * * '
+  dataClassification: confidential
+  deletionPolicy: snapshot-then-delete
+  engine: mysql
+  engineVersion: "44"
+  network:
+    exposure: cluster-only
+  owner:
+    contact: no@no.cz
+    costCentre: CC-finance-12
+    onCallRotation: "334"
+    team: demo-team
+  purpose: fgdfgdfg
+  region: eu-central-2
+  service: fdsdfsdf
+  size: small
+  tier: standard
