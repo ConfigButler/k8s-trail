@@ -1,0 +1,32 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: seats
+  namespace: voter
+spec:
+  branch: main
+  clusterProviderRef:
+    name: default
+  commit:
+    message:
+      liveTemplate: |-
+        chore(seats): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(seats): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window: 5s
+  gitProviderRef:
+    name: k8s-trail
+  onRefusal: Ignore
+  path: clusters/k8s.koudijs.dev/seating
+  placement:
+    byType:
+      examples.configbutler.ai/v1alpha1/seatingplans: seatingplans/{name}.yaml
+      examples.configbutler.ai/v1alpha1/seats: seats/{label:voter.configbutler.ai/seatingplan}/row-{label:voter.configbutler.ai/row}.yaml
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false

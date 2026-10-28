@@ -1,0 +1,20 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: seats
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: seats
+  rules:
+    - apiGroups:
+        - examples.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      operations:
+        - CREATE
+        - UPDATE
+        - DELETE
+      resources:
+        - seats
+        - seatingplans
