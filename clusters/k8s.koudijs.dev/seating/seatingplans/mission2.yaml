@@ -1,0 +1,8 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: SeatingPlan
+metadata:
+  name: mission2
+spec:
+  columns: 12
+  rows: 8
+  title: Mission 2
