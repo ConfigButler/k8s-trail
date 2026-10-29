@@ -23,69 +23,6 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: Seat
 metadata:
   labels:
-    voter.configbutler.ai/column: "04"
-    voter.configbutler.ai/row: "04"
-    voter.configbutler.ai/seatingplan: mission2
-  name: mission2-4-4
-spec:
-  claimedBy:
-    displayName: sl2101-005
-    username: demo:CgpzbDIxMDEtMDA1Eglyb29tLXBhc3M
-  color: '#e4572e'
-  column: 4
-  emoji: "\U0001F980"
-  row: 4
-  seatingPlanRef:
-    group: examples.configbutler.ai
-    kind: SeatingPlan
-    name: mission2
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: Seat
-metadata:
-  labels:
-    voter.configbutler.ai/column: "05"
-    voter.configbutler.ai/row: "04"
-    voter.configbutler.ai/seatingplan: mission2
-  name: mission2-4-5
-spec:
-  claimedBy:
-    displayName: sl2101-013
-    username: demo:CgpzbDIxMDEtMDEzEglyb29tLXBhc3M
-  color: '#2ec4b6'
-  column: 5
-  emoji: "\U0001F308"
-  row: 4
-  seatingPlanRef:
-    group: examples.configbutler.ai
-    kind: SeatingPlan
-    name: mission2
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: Seat
-metadata:
-  labels:
-    voter.configbutler.ai/column: "11"
-    voter.configbutler.ai/row: "04"
-    voter.configbutler.ai/seatingplan: mission2
-  name: mission2-4-11
-spec:
-  claimedBy:
-    displayName: sl2101-018
-    username: demo:CgpzbDIxMDEtMDE4Eglyb29tLXBhc3M
-  color: '#5465ff'
-  column: 11
-  emoji: "\U0001F996"
-  row: 4
-  seatingPlanRef:
-    group: examples.configbutler.ai
-    kind: SeatingPlan
-    name: mission2
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: Seat
-metadata:
-  labels:
     voter.configbutler.ai/column: "10"
     voter.configbutler.ai/row: "04"
     voter.configbutler.ai/seatingplan: mission2
@@ -97,27 +34,6 @@ spec:
   color: '#5465ff'
   column: 10
   emoji: "\U0001F980"
-  row: 4
-  seatingPlanRef:
-    group: examples.configbutler.ai
-    kind: SeatingPlan
-    name: mission2
----
-apiVersion: examples.configbutler.ai/v1alpha1
-kind: Seat
-metadata:
-  labels:
-    voter.configbutler.ai/column: "06"
-    voter.configbutler.ai/row: "04"
-    voter.configbutler.ai/seatingplan: mission2
-  name: mission2-4-6
-spec:
-  claimedBy:
-    displayName: sl2101-038
-    username: demo:CgpzbDIxMDEtMDM4Eglyb29tLXBhc3M
-  color: '#ff8fab'
-  column: 6
-  emoji: "\U0001F984"
   row: 4
   seatingPlanRef:
     group: examples.configbutler.ai
