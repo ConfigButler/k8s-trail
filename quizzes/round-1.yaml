@@ -1,0 +1,36 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: QuizSession
+metadata:
+  annotations:
+    voter.configbutler.ai/ballot-groups: demo:frontend-vue,demo:voter-audience
+  name: round-1
+spec:
+  questions:
+    - choices:
+        - Yes, every day
+        - Once, it scared me
+        - What's kubectl?
+      id: kubectl
+      required: true
+      title: Have you ever typed kubectl?
+      type: singleChoice
+    - choices:
+        - What is KubeCon?
+        - "1.000"
+        - "5.000"
+        - "10.000"
+        - "15.000"
+      id: kubecon
+      required: true
+      title: How many people visit KubeCon?
+      type: singleChoice
+    - choices:
+        - Yes, cool!
+        - Yes, but too big
+        - "No"
+      id: cncf
+      required: true
+      title: Do you know CNCF?
+      type: singleChoice
+  state: closed
+  title: Warm-up
