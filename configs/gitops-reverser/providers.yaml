@@ -23,3 +23,24 @@ spec:
   branch: main
   gitProviderRef:
     name: k8s-trail
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: KubeProvider
+metadata:
+  name: local
+  namespace: voter
+spec:
+  allowedApplierClaims:
+    - applierNamespaces:
+        - '{consumer.namespace}'
+      consumerNamespaces:
+        from: Same
+  allowedGitTargets:
+    - consumerNamespaces:
+        from: Same
+      sourceNamespaces:
+        - '{consumer.namespace}'
+  attribution:
+    auditRoute: default
+  commitRequests: Ignore
+  inCluster: {}
