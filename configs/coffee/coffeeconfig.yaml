@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "Free coffee for all?sdfsdf"
-  currency: 'IDR'
+  currency: 'EUR'
   products:
     - description: ""
       enabled: true
@@ -56,5 +56,5 @@ spec:
       name: "null"
       priceCents: 1000
       sku: Bubble tea
-  shopName: 'Jas Verstoppen'
+  shopName: 'Coffee ordering'
   vouchers: []
