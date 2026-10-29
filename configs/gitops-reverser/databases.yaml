@@ -13,3 +13,38 @@ spec:
         - v1alpha1
       resources:
         - databases
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: databases
+  namespace: voter
+spec:
+  allowedCommitRequests:
+    - consumerNamespaces:
+        from: Same
+  commit:
+    message:
+      liveTemplate: |-
+        chore(databases): {{.Count}} database request{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(databases): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window:
+      idleTimeout: 5s
+      maxDuration: 1m
+  gitBranchRef:
+    name: main
+  kubeProviderRef:
+    name: local
+  onRefusal: Ignore
+  path: databases
+  placement:
+    byType:
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false

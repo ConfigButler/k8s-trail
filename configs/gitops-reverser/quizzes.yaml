@@ -13,3 +13,38 @@ spec:
         - v1alpha1
       resources:
         - quizsessions
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: quizzes
+  namespace: voter
+spec:
+  allowedCommitRequests:
+    - consumerNamespaces:
+        from: Same
+  commit:
+    message:
+      liveTemplate: |-
+        chore(quizzes): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(quizzes): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window:
+      idleTimeout: 5s
+      maxDuration: 1m
+  gitBranchRef:
+    name: main
+  kubeProviderRef:
+    name: local
+  onRefusal: Ignore
+  path: quizzes
+  placement:
+    byType:
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false

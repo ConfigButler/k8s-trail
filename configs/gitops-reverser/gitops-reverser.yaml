@@ -26,3 +26,50 @@ spec:
           voter.configbutler.ai/mirror: "true"
       resources:
         - secrets
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: gitops-reverser
+  namespace: voter
+spec:
+  allowedCommitRequests:
+    - consumerNamespaces:
+        from: Same
+  commit:
+    message:
+      liveTemplate: |-
+        chore(gitops-reverser): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}} {{.Namespace}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(gitops-reverser): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window:
+      idleTimeout: 5s
+      maxDuration: 1m
+  encryption:
+    age:
+      enabled: true
+      recipients:
+        extractFromSecret: true
+        generateWhenMissing: true
+    provider: sops
+    secretRef:
+      name: gitops-reverser-age
+  gitBranchRef:
+    name: main
+  kubeProviderRef:
+    name: local
+  onRefusal: Ignore
+  path: configs/gitops-reverser
+  placement:
+    byType:
+      configbutler.ai/v1alpha3/gitbranches: providers.yaml
+      configbutler.ai/v1alpha3/gitproviders: providers.yaml
+      configbutler.ai/v1alpha3/kubeproviders: providers.yaml
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: true
