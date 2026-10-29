@@ -157,9 +157,9 @@ spec:
   claimedBy:
     displayName: sl2101-028
     username: demo:CgpzbDIxMDEtMDI4Eglyb29tLXBhc3M
-  color: '#ff8fab'
+  color: '#e4572e'
   column: 1
-  emoji: "\U0001F9C7"
+  emoji: "\U0001F344"
   row: 1
   seatingPlanRef:
     group: examples.configbutler.ai
