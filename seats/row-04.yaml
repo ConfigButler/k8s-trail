@@ -31,9 +31,9 @@ spec:
   claimedBy:
     displayName: smoke-002
     username: demo:CglzbW9rZS0wMDISCXJvb20tcGFzcw
-  color: '#e9ecef'
+  color: '#9b5de5'
   column: 12
-  emoji: "\U0001F438"
+  emoji: "\U0001F422"
   row: 4
   seatingPlanRef:
     group: examples.configbutler.ai
