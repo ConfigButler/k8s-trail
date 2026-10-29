@@ -10,9 +10,9 @@ spec:
   claimedBy:
     displayName: Simon Koudijs
     username: github:simonkoudijs@gmail.com
-  color: '#f15bb5'
+  color: '#9b5de5'
   column: 4
-  emoji: "\U0001F984"
+  emoji: "\U0001F419"
   row: 2
   seatingPlanRef:
     group: examples.configbutler.ai
