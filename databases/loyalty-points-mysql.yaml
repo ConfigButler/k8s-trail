@@ -1,0 +1,25 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  annotations:
+    platform.configbutler.ai/intent: 'Bumping to medium: the launch forecast doubled after the campaign was signed off, and small will not hold the accrual history past March.'
+  name: loyalty-points-mysql
+spec:
+  backup:
+    pointInTimeRecovery: true
+    retentionDays: 35
+  dataClassification: internal
+  deletionPolicy: snapshot-then-delete
+  engine: mysql
+  engineVersion: "8.0"
+  network:
+    exposure: vpc
+  owner:
+    contact: digital-channels@example.com
+    costCentre: CC-finance-23
+    team: digital-channels
+  purpose: Points balances and the accrual history behind the loyalty programme. Rebuildable from the event stream, slowly.
+  region: eu-central-1
+  service: loyalty-points
+  size: medium
+  tier: business-critical

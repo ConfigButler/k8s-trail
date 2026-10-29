@@ -1,0 +1,27 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  annotations:
+    platform.configbutler.ai/intent: Is it now faster?
+  name: bllaaaat
+spec:
+  backup:
+    pointInTimeRecovery: true
+    retentionDays: 4
+  dataClassification: public
+  deletionPolicy: retain
+  engine: mariadb
+  engineVersion: "113"
+  network:
+    exposure: vpc
+  owner:
+    contact: testteam@test.com
+    costCentre: CC-finance-04
+    onCallRotation: 134234ab
+    team: blat
+  purpose: dfghdfghdfgh
+  region: eu-central-1
+  service: blaat
+  size: medium
+  storageGB: 23
+  tier: sandbox

@@ -1,0 +1,20 @@
+apiVersion: platform.configbutler.ai/v1alpha1
+kind: Database
+metadata:
+  annotations:
+    platform.configbutler.ai/intent: Test message?
+  name: test-test-test
+spec:
+  dataClassification: internal
+  deletionPolicy: snapshot-then-delete
+  engine: postgresql
+  network:
+    exposure: cluster-only
+  owner:
+    contact: Test@test.org
+    costCentre: CC-finance-04
+    team: testtest
+  region: eu-central-2
+  service: testy
+  size: small
+  tier: standard
