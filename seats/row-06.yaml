@@ -165,3 +165,24 @@ spec:
     group: examples.configbutler.ai
     kind: SeatingPlan
     name: mission2
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "05"
+    voter.configbutler.ai/row: "06"
+    voter.configbutler.ai/seatingplan: mission2
+  name: mission2-6-5
+spec:
+  claimedBy:
+    displayName: sl2101-036
+    username: demo:CgpzbDIxMDEtMDM2Eglyb29tLXBhc3M
+  color: '#ff8fab'
+  column: 5
+  emoji: "\U0001F996"
+  row: 6
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: mission2
