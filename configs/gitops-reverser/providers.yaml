@@ -1,0 +1,25 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitBranch
+metadata:
+  name: coffee-change
+  namespace: voter
+spec:
+  allowedGitTargets:
+    - consumerNamespaces:
+        from: Same
+  branch: coffee-change
+  gitProviderRef:
+    name: k8s-trail
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitBranch
+metadata:
+  name: main
+  namespace: voter
+spec:
+  allowedGitTargets:
+    - consumerNamespaces:
+        from: Same
+  branch: main
+  gitProviderRef:
+    name: k8s-trail
