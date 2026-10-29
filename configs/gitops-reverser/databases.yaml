@@ -1,0 +1,15 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: databases
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: databases
+  rules:
+    - apiGroups:
+        - platform.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      resources:
+        - databases

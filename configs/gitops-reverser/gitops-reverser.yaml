@@ -1,0 +1,28 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: gitops-reverser
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: gitops-reverser
+  rules:
+    - apiGroups:
+        - configbutler.ai
+      apiVersions:
+        - v1alpha3
+      resources:
+        - kubeproviders
+        - gitproviders
+        - gitbranches
+        - gittargets
+        - watchrules
+    - apiGroups:
+        - ""
+      apiVersions:
+        - v1
+      objectSelector:
+        matchLabels:
+          voter.configbutler.ai/mirror: "true"
+      resources:
+        - secrets

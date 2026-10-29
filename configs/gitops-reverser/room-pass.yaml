@@ -1,0 +1,15 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: room-pass
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: room-pass
+  rules:
+    - apiGroups:
+        - room-pass.koudijs.dev
+      apiVersions:
+        - v1alpha1
+      resources:
+        - rooms

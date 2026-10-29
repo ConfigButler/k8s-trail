@@ -1,0 +1,15 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: quizzes
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: quizzes
+  rules:
+    - apiGroups:
+        - examples.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      resources:
+        - quizsessions
