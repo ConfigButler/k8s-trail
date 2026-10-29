@@ -8,7 +8,7 @@ metadata:
     voter.configbutler.ai/submitter: Blaaat
   name: mission2-6-10
 spec:
-  color: '#f3a712'
+  color: '#2ec4b6'
   column: 10
   displayName: Blaaat
   emoji: "\U0001F98A"
