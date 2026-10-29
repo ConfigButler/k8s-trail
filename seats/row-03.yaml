@@ -1,0 +1,20 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "09"
+    voter.configbutler.ai/row: "03"
+    voter.configbutler.ai/seatingplan: mission2
+  name: mission2-3-9
+spec:
+  claimedBy:
+    displayName: sl2101-010
+    username: demo:CgpzbDIxMDEtMDEwEglyb29tLXBhc3M
+  color: '#f3a712'
+  column: 9
+  emoji: "\U0001F344"
+  row: 3
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: mission2
