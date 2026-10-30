@@ -35,4 +35,4 @@ spec:
   payments:
     apiKeySecretRef:
       key: Ns
-      name: Ha
+      name: Haa
