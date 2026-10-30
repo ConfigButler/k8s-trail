@@ -6,3 +6,5 @@ spec:
   columns: 16
   rows: 10
   title: Mission 2
+  aisles:
+    - 8
