@@ -8,49 +8,9 @@ spec:
   products:
     - description: ""
       enabled: true
-      name: Quadruple expresso
-      priceCents: 300
-      sku: coffee-4
-    - description: ""
-      enabled: true
       name: Bakkie pleur
       priceCents: 200
       sku: coffee-5
-    - description: ""
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-6
-    - description: "0"
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-7
-    - description: ""
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-8
-    - description: ""
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-10
-    - description: ""
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-16
-    - description: ""
-      enabled: false
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-17
-    - description: "]"
-      enabled: false
-      name: Bakkie pleur
-      priceCents: 0
-      sku: coffee-13
     - description: "Null"
       enabled: true
       name: "null"
