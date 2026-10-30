@@ -26,7 +26,7 @@ spec:
       name: lekker zwart lekker sterk
       priceCents: 300
       sku: lekkersterk
-  shopName: "\U0001F44D "
+  shopName: "Hot Cheese"
   vouchers: []
   mail:
     apiKeySecretRef:
