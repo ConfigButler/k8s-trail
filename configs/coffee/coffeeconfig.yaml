@@ -8,7 +8,7 @@ spec:
   products:
     - description: "Tea"
       enabled: true
-      name: Yesterday's filter coffee
+      name: Tea
       priceCents: 1000
       sku: coffee-filter
   shopName: "Hide"
