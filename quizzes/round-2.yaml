@@ -42,5 +42,5 @@ spec:
       required: true
       title: What should happen when two people save the same setting at once?
       type: singleChoice
-  state: live
+  state: closed
   title: Building the frontend
