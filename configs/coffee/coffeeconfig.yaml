@@ -6,8 +6,8 @@ spec:
   bannerText: "Great presentation \U0001F601"
   currency: 'YEN'
   products:
-    - description: "Batch brew for fast queues"
-      enabled: false
+    - description: "Yuck"
+      enabled: true
       name: Yesterday's filter coffee
       priceCents: 1000
       sku: coffee-filter
