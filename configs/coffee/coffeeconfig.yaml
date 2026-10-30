@@ -36,3 +36,4 @@ spec:
     apiKeySecretRef:
       key: Ns
       name: Haa
+    zeroAmountCheckoutAllowed: true
