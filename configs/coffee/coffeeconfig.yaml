@@ -6,7 +6,7 @@ spec:
   bannerText: "Great presentation \U0001F601"
   currency: 'YEN'
   products:
-    - description: "Yuck"
+    - description: "Tea"
       enabled: true
       name: Yesterday's filter coffee
       priceCents: 1000
