@@ -31,7 +31,7 @@ spec:
       name: Bumble Coffee
       priceCents: 300
       sku: coffee-5
-  shopName: "Hide"
+  shopName: "KC"
   vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: Heewee, enabled: true, maximumUsage: 1}]
   mail:
     apiKeySecretRef:
