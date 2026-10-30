@@ -23,3 +23,11 @@ spec:
       sku: coffee-filter
   shopName: 'Koudijs Demo Tea'
   vouchers: []
+  mail:
+    apiKeySecretRef:
+      key: Ter
+      name: Tes
+  payments:
+    apiKeySecretRef:
+      key: Ns
+      name: Ha
