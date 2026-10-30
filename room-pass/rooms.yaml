@@ -7,6 +7,8 @@ spec:
     - https://demo.koudijs.dev/
   appearance:
     tagline: Dutch Cloud Native Day · Mission 2
+    picture: /dcnd-2026/images/mission2-simon.jpg
+    pictureAlt: Simon in Mission 2, before the talk
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
   endsAt: "2026-10-30T23:00:00Z"
