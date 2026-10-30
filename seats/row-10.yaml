@@ -31,9 +31,9 @@ spec:
   claimedBy:
     displayName: Boston
     username: demo:CgZib3N0b24SCXJvb20tcGFzcw
-  color: '#ffd23f'
+  color: '#e4572e'
   column: 9
-  emoji: "\U0001F989"
+  emoji: "\U0001F419"
   row: 10
   seatingPlanRef:
     group: examples.configbutler.ai
