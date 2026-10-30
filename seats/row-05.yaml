@@ -10,7 +10,7 @@ spec:
   claimedBy:
     displayName: Sd
     username: demo:CgJzZBIJcm9vbS1wYXNz
-  color: '#e9ecef'
+  color: '#f15bb5'
   column: 5
   emoji: "\U0001F989"
   row: 5
