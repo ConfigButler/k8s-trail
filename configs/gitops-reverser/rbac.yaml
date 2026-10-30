@@ -1,0 +1,54 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: rbac
+  namespace: voter
+spec:
+  allowedCommitRequests:
+    - consumerNamespaces:
+        from: Same
+  commit:
+    message:
+      liveTemplate: |-
+        chore(rbac): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(rbac): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window:
+      idleTimeout: 5s
+      maxDuration: 1m
+  gitBranchRef:
+    name: main
+  kubeProviderRef:
+    name: local
+  onRefusal: Ignore
+  path: configs/rbac
+  placement:
+    byType:
+      rbac.authorization.k8s.io/v1/rolebindings: '{name}.yaml'
+      v1/secrets: secrets/{namespace}/{name}{sensitiveSuffix}
+    default: '{name}.yaml'
+  prune:
+    mode: Always
+  serializeNamespace: false
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: rbac
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: rbac
+  rules:
+    - apiGroups:
+        - rbac.authorization.k8s.io
+      apiVersions:
+        - v1
+      objectSelector:
+        matchLabels:
+          app.kubernetes.io/managed-by: voter
+      resources:
+        - rolebindings
