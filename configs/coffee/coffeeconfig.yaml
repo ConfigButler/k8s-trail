@@ -8,7 +8,7 @@ spec:
   products:
     - description: "Double shot with silky milk"
       enabled: true
-      name: Flat White
+      name: Eggs
       priceCents: 395
       sku: coffee-flat-white
     - description: "Small, strong, and fast"
