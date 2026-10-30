@@ -3,18 +3,23 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "Free coffee for all?sdfsdf"
+  bannerText: "Edit this menu. Every phone in the room sees your change."
   currency: 'EUR'
   products:
-    - description: ""
+    - description: "Double shot with silky milk"
       enabled: true
-      name: Bakkie pleur
-      priceCents: 200
-      sku: coffee-5
-    - description: "Null"
+      name: Flat White
+      priceCents: 395
+      sku: coffee-flat-white
+    - description: "Small, strong, and fast"
       enabled: true
-      name: "null"
-      priceCents: 1000
-      sku: Bubble tea
-  shopName: 'Coffee ordering2'
+      name: "Espresso"
+      priceCents: 275
+      sku: coffee-espresso
+    - description: Batch brew for fast queues
+      enabled: true
+      name: Filter Coffee
+      priceCents: 250
+      sku: coffee-filter
+  shopName: 'Koudijs Demo Coffee'
   vouchers: []
