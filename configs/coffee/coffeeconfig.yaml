@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "Edit this menu. Every phone in the room sees your change."
-  currency: 'DOLLAR'
+  currency: 'NLG'
   products:
     - description: "Double shot with silky milk"
       enabled: true
