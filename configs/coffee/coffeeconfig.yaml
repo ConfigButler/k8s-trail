@@ -17,9 +17,9 @@ spec:
       priceCents: 275
       sku: coffee-espresso
     - description: Batch brew for fast queues
-      enabled: true
-      name: Filter Coffee
-      priceCents: 250
+      enabled: false
+      name: Yesterday's filter coffee
+      priceCents: 1000
       sku: coffee-filter
     - description: lekkerrr
       enabled: true
