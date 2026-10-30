@@ -21,7 +21,7 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
-  shopName: 'Koudijs Demo Tea'
+  shopName: 'Koudij Tea'
   vouchers: []
   mail:
     apiKeySecretRef:
