@@ -21,10 +21,5 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
-    - description: ""
-      enabled: true
-      name: New Coffee
-      priceCents: 300
-      sku: coffee-4
   shopName: 'Koudijs Demo Coffee'
   vouchers: []
