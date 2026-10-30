@@ -2,7 +2,7 @@ apiVersion: examples.configbutler.ai/v1alpha1
 kind: QuizSession
 metadata:
   annotations:
-    voter.configbutler.ai/ballot-groups: demo:frontend-vue,demo:voter-audience
+    voter.configbutler.ai/ballot-groups: none
   name: round-2
 spec:
   questions:
