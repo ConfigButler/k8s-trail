@@ -8,7 +8,7 @@ spec:
   products:
     - description: "Double shot with silky milk"
       enabled: true
-      name: Eggs
+      name: Eggs dino
       priceCents: 395
       sku: coffee-flat-white
     - description: "Taste of disappointment"
