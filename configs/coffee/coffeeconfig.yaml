@@ -11,9 +11,9 @@ spec:
       name: Eggs
       priceCents: 395
       sku: coffee-flat-white
-    - description: "Small, strong, and fast"
+    - description: "Taste of disappointment"
       enabled: true
-      name: "\U0001F64C"
+      name: "Warm beer"
       priceCents: 275
       sku: coffee-espresso
     - description: Batch brew for fast queues
