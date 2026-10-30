@@ -6,33 +6,13 @@ spec:
   bannerText: "Great presentation \U0001F601"
   currency: 'YEN'
   products:
-    - description: "Double shot with silky milk"
-      enabled: true
-      name: Eggs dino
-      priceCents: 395
-      sku: coffee-flat-white
-    - description: "Taste of disappointment"
-      enabled: true
-      name: "Warm beer"
-      priceCents: 275
-      sku: coffee-espresso
-    - description: Batch brew for fast queues
+    - description: "Batch brew for fast queues"
       enabled: false
       name: Yesterday's filter coffee
       priceCents: 1000
       sku: coffee-filter
-    - description: lekkerrr
-      enabled: true
-      name: lekker zwart lekker sterk
-      priceCents: 300
-      sku: lekkersterk
-    - description: Orange Juice with an espreso shot over Cold Ice
-      enabled: true
-      name: Bumble Coffee
-      priceCents: 300
-      sku: coffee-5
   shopName: "KC"
-  vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: Heewee, enabled: true, maximumUsage: 1}]
+  vouchers: []
   mail:
     apiKeySecretRef:
       key: Ter
