@@ -10,9 +10,9 @@ spec:
   claimedBy:
     displayName: Sd
     username: demo:CgJzZBIJcm9vbS1wYXNz
-  color: '#5465ff'
+  color: '#e9ecef'
   column: 5
-  emoji: "\U0001F43C"
+  emoji: "\U0001F989"
   row: 5
   seatingPlanRef:
     group: examples.configbutler.ai
