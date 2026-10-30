@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "Great presentation \U0001F601"
-  currency: 'KC'
+  currency: 'YEN'
   products:
     - description: "Double shot with silky milk"
       enabled: true
