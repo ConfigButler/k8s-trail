@@ -26,7 +26,7 @@ spec:
       name: lekker zwart lekker sterk
       priceCents: 300
       sku: lekkersterk
-  shopName: "Hot Cheese"
+  shopName: "Hot Cheetos"
   vouchers: [{appliesToProducts: [], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: Heewee, enabled: true, maximumUsage: 1}]
   mail:
     apiKeySecretRef:
