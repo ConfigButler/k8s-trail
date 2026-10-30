@@ -13,7 +13,7 @@ spec:
       sku: coffee-flat-white
     - description: "Small, strong, and fast"
       enabled: true
-      name: "Espresso"
+      name: "\U0001F64C"
       priceCents: 275
       sku: coffee-espresso
     - description: Batch brew for fast queues
