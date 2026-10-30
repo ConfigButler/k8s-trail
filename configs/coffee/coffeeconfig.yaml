@@ -21,6 +21,11 @@ spec:
       name: Filter Coffee
       priceCents: 250
       sku: coffee-filter
+    - description: lekkerrr
+      enabled: true
+      name: lekker zwart lekker sterk
+      priceCents: 300
+      sku: lekkersterk
   shopName: "\U0001F44D "
   vouchers: []
   mail:
