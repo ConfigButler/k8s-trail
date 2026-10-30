@@ -56,5 +56,5 @@ spec:
       name: "null"
       priceCents: 1000
       sku: Bubble tea
-  shopName: 'Coffee ordering'
+  shopName: 'Coffee ordering2'
   vouchers: []
