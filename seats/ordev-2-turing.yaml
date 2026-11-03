@@ -1,0 +1,11 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: SeatingPlan
+metadata:
+  name: ordev-2-turing
+spec:
+  aisles:
+    - 6
+    - 19
+  columns: 25
+  rows: 12
+  title: Turing

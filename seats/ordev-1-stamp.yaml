@@ -1,0 +1,10 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: SeatingPlan
+metadata:
+  name: ordev-1-stamp
+spec:
+  aisles:
+    - 10
+  columns: 20
+  rows: 15
+  title: Stamp
