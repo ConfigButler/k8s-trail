@@ -31,3 +31,67 @@ spec:
     prompt: How familiar are you with GitOps?
   stopped: false
   title: Room Pass
+---
+apiVersion: room-pass.koudijs.dev/v1alpha1
+kind: Room
+metadata:
+  name: ordev-1-stamp
+spec:
+  allowedReturnURLs:
+    - https://demo.koudijs.dev/
+  appearance:
+    tagline: Ordev · Stamp · Thursday 14:55
+  attributionNote: Both are used for demo purposes.
+  audienceGroup: demo:voter-audience
+  endsAt: "2026-11-05T23:00:00Z"
+  enrollment: Open
+  joinCode:
+    length: 6
+    rotateEvery: 30s
+    validFor: 120s
+  maxParticipants: 300
+  question:
+    answers:
+      - group: demo:gitops-never
+        label: Never used it
+      - group: demo:gitops-idea
+        label: I know the idea
+      - group: demo:gitops-use
+        label: I use it
+      - group: demo:gitops-run
+        label: I run it
+    prompt: How familiar are you with GitOps?
+  stopped: false
+  title: Room Pass
+---
+apiVersion: room-pass.koudijs.dev/v1alpha1
+kind: Room
+metadata:
+  name: ordev-2-turing
+spec:
+  allowedReturnURLs:
+    - https://demo.koudijs.dev/
+  appearance:
+    tagline: Ordev · Turing · Friday 11:15
+  attributionNote: Both are used for demo purposes.
+  audienceGroup: demo:voter-audience
+  endsAt: "2026-11-06T23:00:00Z"
+  enrollment: Open
+  joinCode:
+    length: 6
+    rotateEvery: 30s
+    validFor: 120s
+  maxParticipants: 300
+  question:
+    answers:
+      - group: demo:gitops-never
+        label: Never used it
+      - group: demo:gitops-idea
+        label: I know the idea
+      - group: demo:gitops-use
+        label: I use it
+      - group: demo:gitops-run
+        label: I run it
+    prompt: How familiar are you with GitOps?
+  stopped: false
+  title: Room Pass
