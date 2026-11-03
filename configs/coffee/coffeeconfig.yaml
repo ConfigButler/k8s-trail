@@ -16,6 +16,11 @@ spec:
       name: Cappucino
       priceCents: 495
       sku: cappucino
+    - description: A very small but strong thingy
+      enabled: true
+      name: Espresso
+      priceCents: 349
+      sku: espresso
   shopName: "Simons coffee ordering"
   vouchers: []
   mail:
