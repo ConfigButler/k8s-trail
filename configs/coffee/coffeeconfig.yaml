@@ -25,10 +25,12 @@ spec:
   vouchers: []
   mail:
     apiKeySecretRef:
-      key: Ter
-      name: Tes
+      key: apiKey
+      name: coffee-mail
+    provider: sendgrid
   payments:
     apiKeySecretRef:
-      key: Ns
-      name: Haa
+      key: apiKey
+      name: coffee-payments
     zeroAmountCheckoutAllowed: true
+    provider: stripe
