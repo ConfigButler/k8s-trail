@@ -3,15 +3,20 @@ kind: CoffeeConfig
 metadata:
   name: demo-coffee
 spec:
-  bannerText: "Tha End"
-  currency: 'YEN'
+  bannerText: "My little example to show what I mean by settings injection"
+  currency: 'EUR'
   products:
     - description: "Tea"
       enabled: true
       name: Tea
-      priceCents: 1000
+      priceCents: 395
       sku: coffee-filter
-  shopName: "Hide"
+    - description: A nice cop of ☕
+      enabled: true
+      name: Cappucino
+      priceCents: 495
+      sku: cappucino
+  shopName: "Simons coffee ordering"
   vouchers: []
   mail:
     apiKeySecretRef:
