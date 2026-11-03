@@ -68,3 +68,39 @@ spec:
   secretRef:
     name: k8s-trail-git
   url: ssh://git@github.com/ConfigButler/k8s-trail.git
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitBranch
+metadata:
+  name: coffee-settings-main
+  namespace: voter
+spec:
+  allowedGitTargets:
+    - consumerNamespaces:
+        from: Same
+  branch: main
+  gitProviderRef:
+    name: coffee-settings
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: GitProvider
+metadata:
+  name: coffee-settings
+  namespace: voter
+spec:
+  allowedGitBranches:
+    - branchPatterns:
+        - main
+      consumerNamespaces:
+        from: Same
+  commit:
+    committer:
+      email: bot@configbutler.ai
+      name: ConfigButler Bot
+    signing:
+      generateWhenMissing: false
+      secretRef:
+        name: k8s-audit-trail-signing
+  secretRef:
+    name: coffee-settings-git
+  url: ssh://git@github.com/ConfigButler/coffee-settings.git

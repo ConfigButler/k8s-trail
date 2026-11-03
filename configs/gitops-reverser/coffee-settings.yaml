@@ -1,0 +1,71 @@
+apiVersion: configbutler.ai/v1alpha3
+kind: GitTarget
+metadata:
+  name: coffee-settings
+  namespace: voter
+spec:
+  allowedCommitRequests:
+    - consumerNamespaces:
+        from: Same
+  commit:
+    message:
+      liveTemplate: |-
+        chore(coffee): {{.Count}} change{{if ne .Count 1}}s{{end}}
+
+        {{range .Resources -}}
+        - [{{.Operation}}] {{if .Kind}}{{.Kind}}{{else}}{{.Resource}}{{end}}/{{.Name}}{{with .ResourceVersion}}@{{.}}{{end}}
+        {{end -}}
+      reconcileTemplate: 'chore(coffee): reconcile {{.Count}} {{if .Resource}}{{.Resource}}{{else}}resources{{end}}{{with .ResourceVersion}} at rv {{.}}{{end}}'
+    window:
+      idleTimeout: 5s
+      maxDuration: 1m
+  encryption:
+    age:
+      enabled: true
+      recipients:
+        extractFromSecret: true
+        generateWhenMissing: true
+        publicKeys:
+          - age1dsc4jh0k4wwsq3tcphnzuddqa5yqr2t0l2tr8xh7m0u7h7elhagqkpud04
+    provider: sops
+    secretRef:
+      name: coffee-settings-age
+  gitBranchRef:
+    name: coffee-settings-main
+  kubeProviderRef:
+    name: local
+  onRefusal: Ignore
+  path: coffee
+  placement:
+    byType:
+      examples.configbutler.ai/v1alpha1/coffeeconfigs: resources/coffeeconfig.yaml
+      v1/secrets: resources/secrets/{namespace}/{name}{sensitiveSuffix}
+    default: resources/{name}.yaml
+  prune:
+    mode: Always
+  serializeNamespace: false
+---
+apiVersion: configbutler.ai/v1alpha3
+kind: WatchRule
+metadata:
+  name: coffee-settings
+  namespace: voter
+spec:
+  gitTargetRef:
+    name: coffee-settings
+  rules:
+    - apiGroups:
+        - examples.configbutler.ai
+      apiVersions:
+        - v1alpha1
+      resources:
+        - coffeeconfigs
+    - apiGroups:
+        - ""
+      apiVersions:
+        - v1
+      objectSelector:
+        matchLabels:
+          voter.configbutler.ai/coffee-settings: "true"
+      resources:
+        - secrets
