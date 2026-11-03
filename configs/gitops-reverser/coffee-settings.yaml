@@ -39,7 +39,7 @@ spec:
   placement:
     byType:
       examples.configbutler.ai/v1alpha1/coffeeconfigs: resources/coffeeconfig.yaml
-      v1/secrets: resources/secrets/{namespace}/{name}{sensitiveSuffix}
+      v1/secrets: resources/{namespace}-{name}{sensitiveSuffix}
     default: resources/{name}.yaml
   prune:
     mode: Always
