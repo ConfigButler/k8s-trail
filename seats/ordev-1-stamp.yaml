@@ -4,7 +4,7 @@ metadata:
   name: ordev-1-stamp
 spec:
   aisles:
-    - 10
-  columns: 20
-  rows: 15
+    - 8
+  columns: 15
+  rows: 16
   title: Stamp
