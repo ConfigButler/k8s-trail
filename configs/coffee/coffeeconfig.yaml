@@ -21,7 +21,7 @@ spec:
       name: Espresso
       priceCents: 349
       sku: espresso
-  shopName: "Coffee order system!"
+  shopName: "Coffee order system"
   vouchers: []
   mail:
     apiKeySecretRef:
