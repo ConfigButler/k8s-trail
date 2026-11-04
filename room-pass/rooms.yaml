@@ -52,15 +52,17 @@ spec:
   maxParticipants: 300
   question:
     answers:
-      - group: demo:gitops-never
-        label: Never used it
-      - group: demo:gitops-idea
-        label: I know the idea
-      - group: demo:gitops-use
-        label: I use it
-      - group: demo:gitops-run
-        label: I run it
-    prompt: How familiar are you with GitOps?
+      - group: demo:gitops-taking-over
+        label: "\U0001F680 Taking over: soon it's just how we deploy"
+      - group: demo:gitops-growing
+        label: "\U0001F4C8 Growing steadily"
+      - group: demo:gitops-past-peak
+        label: "\U0001F4C9 Past its peak: the hype is fading"
+      - group: demo:gitops-on-its-way-out
+        label: "\U0001FAA6 On its way out: who wants all this YAML?"
+      - group: demo:gitops-what-is-that
+        label: "\U0001F914 Oef, what is that again?"
+    prompt: Where is GitOps going?
   stopped: false
   title: Room Pass
 ---
