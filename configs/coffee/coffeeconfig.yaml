@@ -8,7 +8,7 @@ spec:
   products:
     - description: "A very nice cop of ☕"
       enabled: false
-      name: Cappucino
+      name: Cappucinooo
       priceCents: 504
       sku: cappucino
   shopName: "do this on stage!"
