@@ -88,14 +88,14 @@ spec:
   maxParticipants: 300
   question:
     answers:
-      - group: demo:gitops-never
-        label: Never used it
-      - group: demo:gitops-idea
-        label: I know the idea
-      - group: demo:gitops-use
-        label: I use it
-      - group: demo:gitops-run
-        label: I run it
-    prompt: How familiar are you with GitOps?
+      - group: demo:crd-write
+        label: "\U0001F6E0️ I write them"
+      - group: demo:crd-use
+        label: "\U0001F4E6 I use them"
+      - group: demo:crd-heard
+        label: "\U0001F442 Heard of it, not sure what it is"
+      - group: demo:crd-no-idea
+        label: "\U0001F937 No idea"
+    prompt: What is a CRD?
   stopped: false
   title: Room Pass
