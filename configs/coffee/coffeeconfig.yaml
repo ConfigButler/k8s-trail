@@ -11,7 +11,7 @@ spec:
       name: Cappucino
       priceCents: 504
       sku: cappucino
-  shopName: "bdjejebdwidbdjeixbb"
+  shopName: "do this on stage!"
   vouchers: []
   mail:
     apiKeySecretRef:
