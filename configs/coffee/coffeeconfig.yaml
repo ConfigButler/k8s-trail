@@ -11,17 +11,17 @@ spec:
       name: Tea
       priceCents: 395
       sku: coffee-filter
-    - description: A nice cop of ☕
+    - description: A very nice cop of ☕
       enabled: true
       name: Cappucino
-      priceCents: 495
+      priceCents: 504
       sku: cappucino
     - description: A very small but strong thingy
       enabled: true
       name: Espresso
       priceCents: 349
       sku: espresso
-  shopName: "Coffee order system!"
+  shopName: "Dont do this on stage!"
   vouchers: []
   mail:
     apiKeySecretRef:
