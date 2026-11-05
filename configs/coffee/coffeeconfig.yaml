@@ -16,7 +16,7 @@ spec:
       name: Tea
       priceCents: 39
       sku: coffee-filter
-  shopName: "Please do this on stage!fghfghfgh"
+  shopName: "NICE TALK!"
   vouchers: []
   mail:
     apiKeySecretRef:
