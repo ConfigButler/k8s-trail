@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "My little example to show what I mean by settings injection"
-  currency: 'EUR'
+  currency: 'SEk'
   products:
     - description: "Tea"
       enabled: true
