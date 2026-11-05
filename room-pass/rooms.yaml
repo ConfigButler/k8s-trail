@@ -41,6 +41,8 @@ spec:
     - https://demo.koudijs.dev/
   appearance:
     tagline: Ordev · Stamp · Thursday 14:55
+    picture: /config-deserves-better/images/stamp-1.jpg
+    pictureAlt: A wall-mounted screen reading Room Stamp
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
   endsAt: "2026-11-05T23:00:00Z"
