@@ -18,3 +18,24 @@ spec:
     group: examples.configbutler.ai
     kind: SeatingPlan
     name: ordev-1-stamp
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "15"
+    voter.configbutler.ai/row: "01"
+    voter.configbutler.ai/seatingplan: ordev-1-stamp
+  name: ordev-1-stamp-1-15
+spec:
+  claimedBy:
+    displayName: Berni
+    username: demo:CgViZXJuaRIJcm9vbS1wYXNz
+  color: '#9b5de5'
+  column: 15
+  emoji: "\U0001F422"
+  row: 1
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: ordev-1-stamp
