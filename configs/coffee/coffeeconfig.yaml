@@ -6,21 +6,11 @@ spec:
   bannerText: "My little example to show what I mean by settings injection"
   currency: 'SEk'
   products:
-    - description: "Tea"
-      enabled: true
-      name: Tea
-      priceCents: 395
-      sku: coffee-filter
-    - description: A very nice cop of ☕
+    - description: "A very nice cop of ☕"
       enabled: false
       name: Cappucino
       priceCents: 504
       sku: cappucino
-    - description: A very small but strong thingy
-      enabled: true
-      name: Espresso
-      priceCents: 349
-      sku: espresso
   shopName: "bdjejebdwidbdjeixbb"
   vouchers: []
   mail:
