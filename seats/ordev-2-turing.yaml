@@ -4,8 +4,7 @@ metadata:
   name: ordev-2-turing
 spec:
   aisles:
-    - 6
-    - 19
-  columns: 25
-  rows: 12
+    - 8
+  columns: 16
+  rows: 15
   title: Turing
