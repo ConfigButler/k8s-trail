@@ -18,3 +18,24 @@ spec:
     group: examples.configbutler.ai
     kind: SeatingPlan
     name: ordev-2-turing
+---
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "07"
+    voter.configbutler.ai/row: "01"
+    voter.configbutler.ai/seatingplan: ordev-2-turing
+  name: ordev-2-turing-1-7
+spec:
+  claimedBy:
+    displayName: thcarlsen
+    username: demo:Cgl0aGNhcmxzZW4SCXJvb20tcGFzcw
+  color: '#e4572e'
+  column: 7
+  emoji: "\U0001F996"
+  row: 1
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: ordev-2-turing
