@@ -96,7 +96,7 @@ spec:
     username: demo:CgZqYXNwZXISCXJvb20tcGFzcw
   color: '#5465ff'
   column: 14
-  emoji: ☕
+  emoji: "\U0001F47E"
   row: 8
   seatingPlanRef:
     group: examples.configbutler.ai
