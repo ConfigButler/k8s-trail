@@ -4,7 +4,7 @@ metadata:
   name: demo-coffee
 spec:
   bannerText: "My little example to show what I mean by settings injection"
-  currency: 'SEk'
+  currency: 'EUR'
   products:
     - description: "A very nice cop of ☕"
       enabled: true
@@ -16,8 +16,8 @@ spec:
       name: Tea
       priceCents: 39
       sku: coffee-filter
-  shopName: "NICE TALK!!"
-  vouchers: []
+  shopName: "Coffee ordering demo"
+  vouchers: [{appliesToProducts: [coffee-filter], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 5}]
   mail:
     apiKeySecretRef:
       key: apiKey
