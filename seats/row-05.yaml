@@ -1,0 +1,20 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "08"
+    voter.configbutler.ai/row: "05"
+    voter.configbutler.ai/seatingplan: ordev-2-turing
+  name: ordev-2-turing-5-8
+spec:
+  claimedBy:
+    displayName: Diogo
+    username: demo:CgVkaW9nbxIJcm9vbS1wYXNz
+  color: '#5465ff'
+  column: 8
+  emoji: "\U0001F989"
+  row: 5
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: ordev-2-turing
