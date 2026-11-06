@@ -1,0 +1,20 @@
+apiVersion: examples.configbutler.ai/v1alpha1
+kind: Seat
+metadata:
+  labels:
+    voter.configbutler.ai/column: "16"
+    voter.configbutler.ai/row: "04"
+    voter.configbutler.ai/seatingplan: ordev-2-turing
+  name: ordev-2-turing-4-16
+spec:
+  claimedBy:
+    displayName: jack
+    username: demo:CgRqYWNrEglyb29tLXBhc3M
+  color: '#f3a712'
+  column: 16
+  emoji: "\U0001F680"
+  row: 4
+  seatingPlanRef:
+    group: examples.configbutler.ai
+    kind: SeatingPlan
+    name: ordev-2-turing
