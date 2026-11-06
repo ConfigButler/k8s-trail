@@ -46,7 +46,7 @@ spec:
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
   endsAt: "2026-11-05T23:00:00Z"
-  enrollment: Open
+  enrollment: Closed
   joinCode:
     length: 6
     rotateEvery: 30s
@@ -77,6 +77,8 @@ spec:
     - https://demo.koudijs.dev/
   appearance:
     tagline: Ordev · Turing · Friday 11:15
+    picture: /abusing-kubernetes-api/images/room-turing.jpg
+    pictureAlt: A wall-mounted screen reading Room Turing
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
   endsAt: "2026-11-06T23:00:00Z"
