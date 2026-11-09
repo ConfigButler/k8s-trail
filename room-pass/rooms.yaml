@@ -36,6 +36,8 @@ apiVersion: room-pass.koudijs.dev/v1alpha1
 kind: Room
 metadata:
   name: ordev-1-stamp
+  annotations:
+    freelens.app/resource-version: v1alpha1
 spec:
   allowedReturnURLs:
     - https://demo.koudijs.dev/
