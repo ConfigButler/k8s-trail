@@ -74,6 +74,8 @@ apiVersion: room-pass.koudijs.dev/v1alpha1
 kind: Room
 metadata:
   name: ordev-2-turing
+  annotations:
+    freelens.app/resource-version: v1alpha1
 spec:
   allowedReturnURLs:
     - https://demo.koudijs.dev/
@@ -83,7 +85,7 @@ spec:
     pictureAlt: A wall-mounted screen reading Room Turing
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
-  endsAt: "2026-11-06T23:00:00Z"
+  endsAt: "2026-11-11T23:00:00Z"
   enrollment: Open
   joinCode:
     length: 6
