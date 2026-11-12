@@ -16,7 +16,7 @@ spec:
       name: Tea
       priceCents: 39
       sku: coffee-filter
-  shopName: "Coffee ordering demo"
+  shopName: "Coffee ordering demo!"
   vouchers: [{appliesToProducts: [coffee-filter], code: voucher-1, discountType: percentage, discountValue: 100, displayMessage: "", enabled: true, maximumUsage: 5}]
   mail:
     apiKeySecretRef:
