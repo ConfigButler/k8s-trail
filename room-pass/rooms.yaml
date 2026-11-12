@@ -85,7 +85,7 @@ spec:
     pictureAlt: A wall-mounted screen reading Room Turing
   attributionNote: Both are used for demo purposes.
   audienceGroup: demo:voter-audience
-  endsAt: "2026-11-13T23:00:00Z"
+  endsAt: "2026-11-06T23:00:00Z"
   enrollment: Open
   joinCode:
     length: 6
